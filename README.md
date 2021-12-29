@@ -1,1 +1,1 @@
-# SNP-filtering
+# Call SNPs and filtering
