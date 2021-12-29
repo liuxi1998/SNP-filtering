@@ -1,2 +1,4 @@
+#Call snps based on a ref and PE reads
+
 with GATK3.8: java -jar GenomeAnalysisTK.jar  -T SelectVariants -R reference.fa -V Pop.vcf.gz -selectType SNP -o Pop.SNP.vcf.gz
 with GATK4.0: gatk SelectVariants -select-type SNP -V Pop.vcf.gz -O Pop.SNP.vcf.gz
