@@ -6,6 +6,8 @@
 `samtools faidx $ref`
 `gatk CreateSequenceDictionary -R $ref -O $ref.dict`
 ## 1.3. mapping
-`bwa mem -t 10 -R "@RG\tID:$ind\tPL:illumina\tLB:$ind\tSM:$ind" $ref $ind_clean_1.fq.gz $ind_clean_2.fq.gz| samtools view -Sb - > $ind.bam`
+```
+bwa mem -t 10 -R "@RG\tID:$ind\tPL:illumina\tLB:$ind\tSM:$ind" $ref $ind_clean_1.fq.gz $ind_clean_2.fq.gz| samtools view -Sb - > $ind.bam
+```
 ## 1.4. sorting
 `samtools sort -@ 30 -m 2G -O bam -o $ind.sort.bam $ind.bam `
